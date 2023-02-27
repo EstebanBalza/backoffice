@@ -20,7 +20,7 @@ class Bien
     private ?string $titre = null;
 
     #[ORM\Column(length: 255)]
-    private ?textarea $Contenu = null;
+    private ?string $Contenu = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $Url_Photo = null;

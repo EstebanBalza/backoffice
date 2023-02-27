@@ -40,10 +40,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->id_bien = new ArrayCollection();
     }
 
-    public function __toString(): string
-    {
-        return $this->city.' '.$this->year;
-    }
+    // public function __toString(): string
+    // {
+    //     return $this->city.' '.$this->year;
+    // }
 
     public function getId(): ?int
     {
