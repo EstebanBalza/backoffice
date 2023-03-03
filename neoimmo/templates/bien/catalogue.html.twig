@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catalogue de Bien{% endblock %}
+
+{% block body %}
+{% for row in biens %}
+<div id="catalogueCard">
+<div class="card"  id="cataloguePlacement" style="width: 18rem;">
+  <a href="/bien/fiche/{{ row.id }}"> <img src="{{ asset ('asset/images/') ~ row.urlPhoto}}" class="card-img-top" alt="..."> </a>
+    <div class="card-body" style="height:24vh">
+      <h5 class="card-title">{{ row.titre }} {{row.typeAnnonce}}</h5>
+      <p style="height:5rem;" class="card-text">Parking : {{row.parking}} <br> Balcon : {{row.balcon}} <br> Jardin : {{row.jardin}} <br> Superficie : {{row.superficie}} m²</p>
+    </div>
+    <ul class="list-group list-group-flush centered">
+      <li class="list-group-item">{{ row.dateAnnonce | date('d/m/y') }}</li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+{# <div id="catalogue">
+    <h2> {{ row.titre }} {{ row.Prix }} {{ row.Type }} {{ row.dateAnnonce | date('d/m/y') }}</h2>
+    <img src={{ asset ('asset/images/') ~ row.urlPhoto}} alt="">
+</div> #}
+    
+{% endfor %}
+{% endblock %}
+
+
+

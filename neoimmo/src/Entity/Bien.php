@@ -19,8 +19,8 @@ class Bien
     #[ORM\Column(length: 50)]
     private ?string $titre = null;
 
-    #[ORM\Column(length: 255)]
-    private ?textarea $Contenu = null;
+    #[ORM\Column(length: 3000)]
+    private ?string $Contenu = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $Url_Photo = null;
@@ -48,6 +48,21 @@ class Bien
 
     #[ORM\ManyToMany(targetEntity: Form::class, inversedBy: 'id_bien')]
     private Collection $form;
+
+    #[ORM\Column]
+    private ?int $superficie = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $type_annonce = null;
+
+    #[ORM\Column]
+    private ?bool $jardin = null;
+
+    #[ORM\Column]
+    private ?bool $balcon = null;
+
+    #[ORM\Column]
+    private ?bool $parking = null;
 
     public function __construct()
     {
@@ -204,6 +219,66 @@ class Bien
     public function removeForm(Form $form): self
     {
         $this->form->removeElement($form);
+
+        return $this;
+    }
+
+    public function getSuperficie(): ?int
+    {
+        return $this->superficie;
+    }
+
+    public function setSuperficie(int $superficie): self
+    {
+        $this->superficie = $superficie;
+
+        return $this;
+    }
+
+    public function getTypeAnnonce(): ?string
+    {
+        return $this->type_annonce;
+    }
+
+    public function setTypeAnnonce(string $type_annonce): self
+    {
+        $this->type_annonce = $type_annonce;
+
+        return $this;
+    }
+
+    public function isJardin(): ?bool
+    {
+        return $this->jardin;
+    }
+
+    public function setJardin(bool $jardin): self
+    {
+        $this->jardin = $jardin;
+
+        return $this;
+    }
+
+    public function isBalcon(): ?bool
+    {
+        return $this->balcon;
+    }
+
+    public function setBalcon(bool $balcon): self
+    {
+        $this->balcon = $balcon;
+
+        return $this;
+    }
+
+    public function isParking(): ?bool
+    {
+        return $this->parking;
+    }
+
+    public function setParking(bool $parking): self
+    {
+        $this->parking = $parking;
 
         return $this;
     }

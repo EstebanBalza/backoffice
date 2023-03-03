@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -31,19 +29,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(length: 255)]
     private ?string $mail = null;
-
-    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Bien::class)]
-    private Collection $id_bien;
-
-    public function __construct()
-    {
-        $this->id_bien = new ArrayCollection();
-    }
-
-    public function __toString(): string
-    {
-        return $this->city.' '.$this->year;
-    }
 
     public function getId(): ?int
     {
@@ -123,36 +108,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setMail(string $mail): self
     {
         $this->mail = $mail;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Bien>
-     */
-    public function getIdBien(): Collection
-    {
-        return $this->id_bien;
-    }
-
-    public function addIdBien(Bien $idBien): self
-    {
-        if (!$this->id_bien->contains($idBien)) {
-            $this->id_bien->add($idBien);
-            $idBien->setUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeIdBien(Bien $idBien): self
-    {
-        if ($this->id_bien->removeElement($idBien)) {
-            // set the owning side to null (unless already changed)
-            if ($idBien->getUser() === $this) {
-                $idBien->setUser(null);
-            }
-        }
 
         return $this;
     }

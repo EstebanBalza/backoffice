@@ -1,0 +1,847 @@
+ *,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  /* bottom: 0; */
+  background-color: #fafafa;
+}
+
+/* CLASSES MAISONS */
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+#catalogueCard{
+  display:inline-flex;
+  justify-content:space-around;
+  margin-top: 3vh;
+  margin-left: 3vw;
+}
+
+#imagio{
+  width: 80%;
+}
+
+
+#catalogueCard img{
+  height: 25vh;
+}
+
+strong{
+  color:#FF6D47;
+}
+
+/* AJOUT POLICE CENTURY GOTHIC */
+@font-face {
+  font-family: 'gothic';
+  src: url(./font/gothic.ttf) format("truetype");
+  src: url(./font/gothic.woff) format("woff");
+}
+
+
+body {
+  font-family: 'gothic', sans-serif;
+  background: #f4f4f4;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  top: 0;
+  font-size:300%;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 150%;
+  color: rgb(104, 100, 100);
+}
+p {
+  margin-left: 9vh;
+  margin-right: 9vh;
+  margin-bottom: 2vh;
+}
+
+
+/* PARAGRAPHE PRESENTATION MAIN */
+
+
+#paragPres {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  line-height: 3vh;
+}
+
+
+/* NAVBAR */
+
+/* PLACEMENT/SETUP NAVBAR */
+nav {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 8%;
+  align-items: center;
+  padding: 15px 25px;
+  background: #fafafa;
+  box-shadow: inset 0px -1px 0px #c5c5c6;
+  /* top: 0; */
+  background-color: rgb(218, 218, 218);
+  z-index: 2;
+}
+
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+
+.nav-icon span {
+  font-family: "gothic", sans-serif;
+  font-size: 25px;
+  margin-left: 10px;
+  font-weight: 400;
+  color: rgb(225, 109, 71);
+}
+
+
+.nav-icon img {
+  width: 40px;
+  /* transform: rotate(-17deg) translateX(5px); */
+  /* logo pivoté */
+}
+
+
+.hamburger {
+  display: none;
+}
+
+
+.navlinks-container a {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #414141;
+  display: inline-block;
+  position: relative;
+}
+
+
+.navlinks-container a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #333;
+  transition: transform 0.3s ease-out;
+
+}
+
+
+.navlinks-container a:hover::after {
+  transform: scaleX(1)
+}
+
+
+main {
+  margin-top: 7%;
+
+}
+
+
+
+.nav-authentication {
+  margin-left: auto;
+}
+
+
+.sign-btns button {
+  font-family: 'gothic', sans-serif;
+  font-size: 16px;
+  min-width: 90px;
+  padding: 10px 5px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(225, 109, 71, )
+}
+
+
+.sign-btns button {
+  border: none;
+  background-color: rgb(225, 109, 71, );
+
+}
+
+
+.sign-user {
+  display: none;
+}
+
+
+/*-----------------------------------------*/
+    /* PAGE GERER VENDRE (PC VERSION) */
+/*-----------------------------------------*/
+@media (min-width: 901px) {
+
+/* FISRT PARAG GERER VENDRE */
+
+/* main :nth-child(1){
+  padding-bottom: 5vh;
+} */
+
+/* BUTTONS COLORS */
+
+.btn-primary:hover{
+  color: #FAFAFA;
+  background-color:#ff6d47;
+  border-color: #FFD4C9;
+}
+
+.btn-primary{
+  color: #ff6d47;
+  background-color:#FAFAFA;
+  border-color: #FFD4C9;
+}
+
+.btn-primary:focus{
+  color: #FAFAFA;
+  background-color:#ff6d47;
+  border-color: #FFD4C9;
+}
+.sectionTuiles{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* SETUP TUILES */
+.flexHumain{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+}
+
+#flexHumain{
+  display: flex;
+  justify-content: center;
+}
+
+/* ADJUSTING ROLLOUT DIV */
+.marginLeft20vw{
+  margin-left: 42vw;
+}
+
+.marginLeft5vw{
+  margin-left: 12vw;
+}
+
+
+/* ADJUSTING FORM */
+
+
+form{
+display:flex;
+flex-direction: column;
+align-items: center;
+gap: 2vh;
+}
+
+.form-group{
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.envoyerBouton{
+  display: flex;
+  align-self: center;
+  margin-top: 2vh;
+}
+}
+/* FORM CONNEXION BACK OFFICE */
+/* REMONTER TITRE */
+
+
+#formConnect input{
+  width: 30vw;
+  border-radius: 10px;
+  border: 1px solid grey;
+
+}
+
+
+/* BACK OFFICE FORMULAIRE AJOUT BIEN */
+.form-group{
+  width: 15vw;
+}
+
+#formAnnonce{
+  margin-right: 15vw;
+  margin-left: 15vw;
+ 
+}
+
+#formAnnonce input{
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+#descriptionAnnonce{
+  display: flex;
+  width:80vw;
+  height:25vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.grandBouton{
+  width: 30vw;
+}
+
+/* RESPONSIVITY MAX-900px DEVICES */
+@media (max-width: 900px) {
+  nav {
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .nav-icon {
+    order: 2;
+    margin: 0 auto;
+  }
+
+
+  .nav-icon span {
+    font-size: 22px;
+  }
+
+
+  .main-navlinks {
+    order: 1;
+  }
+
+  /* FOOTER */
+  .alignLeft {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+
+  .recule {
+    margin-right: 30vw;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    background: rgb(218, 218, 218);
+    align-items: center;
+    position: relative;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 0.3s 0.15s ease-out;
+  }
+
+  .hamburger span:nth-child(1),
+  .hamburger span:nth-child(3) {
+    transition: transform 0.3s ease-out;
+  }
+
+  .hamburger span:nth-child(1) {
+    transform: translateY(7px);
+  }
+
+  .hamburger span:nth-child(3) {
+    transform: translateY(-7px);
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translate(0) rotate(135deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0s ease-out;
+
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translate(0) rotate(-135deg);
+  }
+
+
+
+  /* MAIN PAGE ACCUEIL */
+  /* PARAG PRESENTATION */
+  #paragPres {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+
+  /* CAROUSEL */
+  #carouselExampleIndicators {
+    width: 900px;
+    height: 500px;
+    max-width: 100%;
+  }
+
+
+  .carousel-inner {
+    width: 900px;
+    height: 500px;
+    max-width: 100%;
+  }
+
+  .carousel-indicators {
+    margin-bottom: 6%;
+  }
+
+  .carouAdapt {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-control-next-icon {
+    margin-bottom: 50px;
+  }
+
+  .carousel-control-prev-icon {
+    margin-bottom: 50px;
+  }
+
+  /* AVIS GOOGLE */
+  #avisGoogle {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  /* PAGE GERER VENDRE */
+
+  /* BUTTONS PLACEMENTS */
+  section{
+    display: flex;
+  }
+
+  .card-body{
+    margin-left: 8vw;
+  }
+
+  .flexHumain{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0vh;
+    
+  }
+
+  /* BACK OFFICE PAGE DE CONNEXION*/
+
+
+  #formConnect input{
+    width: 50vw;
+  }
+
+
+
+
+
+  /* TITLE "BESOIN DE CONSEIL ?" */
+
+  #conseil{
+    display: flex;
+    justify-content: center;
+  }
+
+  /* FORMULAIRE DE CONTACT */
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    
+  }
+
+  .form-group{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  .envoyerBouton{
+    display: flex;
+    align-self: center;
+  }
+
+  /* BUTTONS COLORS */
+
+  .btn-primary{
+    color: #ff6d47;
+    background-color:#FAFAFA;
+    border-color: #FFD4C9;
+    width: 8vw;
+  }
+
+  .btn-primary:focus{
+    color: #FAFAFA;
+    background-color:#ff6d47;
+    border-color: #FFD4C9;
+  }
+
+  /* NAV ANIM */
+  .navlinks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    background: #fafafa;
+    top: 100%;
+    left: 0;
+    height: 100vh;
+    padding: 15px 50px 15px 20px;
+    border-right: 1px solid #c5c5c6;
+    transform: translate(-100%);
+  }
+
+
+  .open {
+    transform: translate(0%);
+
+  }
+
+
+  .navlinks-container a {
+    font-size: 18px;
+    margin: 10px 0
+  }
+
+
+  .nav-authentication {
+    order: 3;
+    margin-left: 0;
+  }
+
+
+  .sign-btns {
+    display: none;
+  }
+
+
+  .sign-user {
+    display: block;
+    cursor: pointer;
+    border: none;
+  }
+
+
+  .sign-user img {
+    width: 20px;
+  }
+
+}
+
+/* END OF RESPONSIVE DESIGN MAX 900PX */
+
+/* DEBUT FOOTER */
+
+
+footer {
+  background-color: rgb(218, 218, 218);
+  bottom: 0;
+}
+
+/* RESPONSIVITY FOR MAX500 PX DEVICES */
+
+@media (max-width: 500px) {
+
+  /* NAV */
+  .nav-icon img {
+    width: 30px;
+  }
+
+
+  .nav-icon span {
+    font-size: 20px;
+  }
+
+
+  body {
+    width: 100%;
+    height: 100%;
+  }
+/* SETUP PARAG MAIN */
+  #paragPres :last-child,
+  #paragPres :first-child {
+    margin-left: 12vw;
+    margin-right: 12vw;
+  }
+
+  #paragPres {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+  }
+
+/* Catalogue bien */
+
+#imagio{
+  width:100%;
+  display:flex;
+  justify-content: center;
+}
+
+.formContactChamps{
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+  flex-direction: column;
+}
+
+#name{
+width: 60vw;
+}
+
+#message{
+  width: 80vw;
+}
+#email{
+width: 60vw;
+}
+
+
+#card-text{
+  display: flex;
+  justify-content: center;
+  width:85%;
+}
+
+#catalogueCard{
+  display: flex;
+  justify-content: center;
+  margin: 5vh;
+}
+
+#cataloguePlacement{
+  justify-content: center;
+}
+
+
+
+  /* MODIFICATION CAROUSEL */
+  /* RESIZE TOTAL */
+  #carouselExampleIndicators {
+    width: 414px;
+    height: 300px;
+    max-width: 100%;
+  }
+
+
+  .carousel-inner {
+    width: 414px;
+    height: 360px;
+    max-width: 100%;
+  }
+
+  /* FAIRE REMONTER LES BOUTONS CAROUSEL */
+  .carousel-indicators {
+    margin-bottom: 20%;
+  }
+
+  .carouAdapt {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* FAIRE REMONTER LES FLECHES CAROUSEL */
+  .carousel-control-next-icon {
+    margin-bottom: 50px;
+  }
+
+  /* FAIRE REMONTER LES FLECHES CAROUSEL */
+  .carousel-control-prev-icon {
+    margin-bottom: 50px;
+  }
+
+  /* MODIF AVIS GOOGLE , TO DO */
+  #avisGoogle {
+    width: 414px;
+    height: 300px;
+    max-width: 100%;
+  }
+
+
+  .cardAvis p {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #avisGoogle {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  /* PAGE GERER VENDRE */
+
+  /* MODIF TUILES PAGES GERER VENDRE */
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.card-body{
+  margin:0;
+}
+
+
+.tuile{
+margin-right: 5vw;
+}
+
+  /* MODIF TUILES */
+
+  .btn-primary {
+    background-color: #FF6D47;
+    border-color: #FFD4C9;
+    color:#FAFAFA;
+
+  }
+
+  .btn-primary:hover{
+    color: #FAFAFA;
+    background-color: #FF6D47;
+    border-color: #FFD4C9;
+  }
+  .btn-primary:focus {
+    background-color: #FF6D47;
+    border-color: #FFD4C9;
+  }
+
+  .btn-primary.collapsed {
+    background-color: #FF6D47;
+    color:#FAFAFA;
+    border-color: #FFD4C9;
+  }
+
+  #collapseWidthExample,
+  #honoraires,
+  #interlocuteur,
+  #tranquilité,
+  #humain {
+    margin-left: 13vw;
+    margin-bottom: 2vh;
+  }
+
+  /* MODIF FORM CONTACT */
+
+
+  form{
+    width: 100%;
+  }
+
+  .form-group {
+    width: 80%;
+    
+  }
+  
+  .envoyerBouton{
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .envoyerBouton {
+    width: 50%;
+    align-self: center;
+    margin-top: 3vh;
+  }
+
+  /* AVIS GOOGLE */
+
+  #avisGoogle {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+  }
+  
+
+  /* MODIFICATION BACK OFFICE AJOUT BIEN */
+  #formAnnonce{
+    margin-left: 0;
+
+  }
+
+  .btn{
+    width: 20vw;
+  }
+
+  /* BOUTON PHOTOS, DPE */
+
+
+
+  /* FOOTER */
+
+  .recule{
+    margin:0;
+  }
+
+}
+
+/* .cardAvis{
+  display: flex;
+  word-wrap: wrap;
+} */
+
+/* MODIF INDEX */
+
+
+/* MODIF INDEX PREMIERE DIV #paragPres */
+
