@@ -1,0 +1,6 @@
+composer install
+composer require easycorp/easyadmin-bundle
+composer require symfony/orm-pack
+composer require --dev symfony/maker-bundle
+composer require symfony/form
+composer require symfony/validator

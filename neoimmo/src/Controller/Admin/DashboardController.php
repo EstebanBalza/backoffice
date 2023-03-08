@@ -20,9 +20,11 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use App\Entity\Bien;
 use App\Entity\User;
 use App\Entity\Article;
+use App\Entity\Form;
 
 
 
@@ -62,7 +64,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Bien', 'fas fa-map-marker-alt', Bien::class);
         // MENU AJOUT ADMIN COMMENTE
         // yield MenuItem::linkToCrud('Admin', 'fas fa-comments', User::class);
-        yield MenuItem::linkToCrud('Article', 'fas fa-comments', Article::class);
+        // yield MenuItem::linkToCrud('Article', 'fas fa-comments', Article::class);
     }
 
 
