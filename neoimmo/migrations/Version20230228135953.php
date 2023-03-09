@@ -20,7 +20,7 @@ final class Version20230228135953 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('CREATE TABLE article (id INT AUTO_INCREMENT NOT NULL, titre VARCHAR(255) NOT NULL, contenu VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        
         $this->addSql('CREATE TABLE bien (id INT AUTO_INCREMENT NOT NULL, user_id INT DEFAULT NULL, titre VARCHAR(50) NOT NULL, contenu VARCHAR(255) NOT NULL, url_photo VARCHAR(255) DEFAULT NULL, code_postal VARCHAR(50) NOT NULL, numero_de_ladresse INT NOT NULL, nom_de_la_voie VARCHAR(255) NOT NULL, prix VARCHAR(50) NOT NULL, date_annonce DATETIME NOT NULL, type VARCHAR(50) NOT NULL, INDEX IDX_45EDC386A76ED395 (user_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE bien_form (bien_id INT NOT NULL, form_id INT NOT NULL, INDEX IDX_79C7713DBD95B80F (bien_id), INDEX IDX_79C7713D5FF69B7D (form_id), PRIMARY KEY(bien_id, form_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE form (id INT AUTO_INCREMENT NOT NULL, nom VARCHAR(50) DEFAULT NULL, prenom VARCHAR(255) DEFAULT NULL, mail VARCHAR(255) NOT NULL, contenu VARCHAR(255) NOT NULL, telephone VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');

@@ -1,6 +1,7 @@
 composer install
 composer require easycorp/easyadmin-bundle
 composer require symfony/orm-pack
-composer require --dev symfony/maker-bundle
-composer require symfony/form
-composer require symfony/validator
+
+
+
+mdp hashé : $2y$13$tZJVtY8Yq8e20TGEDa9CpegySAM5H6j8Tn3g1O0KuJp7UCHp4Hxxy

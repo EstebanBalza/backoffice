@@ -31,7 +31,7 @@ use App\Entity\Form;
 
 class DashboardController extends AbstractDashboardController
 {
-    #[IsGranted('ROLE_ADMIN')]
+    // #[IsGranted('ROLE_ADMIN')]
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
@@ -63,7 +63,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linktoRoute('Retour au site', 'fas fa-home', 'app_login');
         yield MenuItem::linkToCrud('Bien', 'fas fa-map-marker-alt', Bien::class);
         // MENU AJOUT ADMIN COMMENTE
-        // yield MenuItem::linkToCrud('Admin', 'fas fa-comments', User::class);
+        yield MenuItem::linkToCrud('Admin', 'fas fa-comments', User::class);
         // yield MenuItem::linkToCrud('Article', 'fas fa-comments', Article::class);
     }
 
